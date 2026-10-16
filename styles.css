@@ -486,6 +486,8 @@ body.equipment-page {
 }
 
 .equipment-book-button {
+	display: inline-block;
+	text-decoration: none;
 	flex: 0 0 auto;
 	padding: 0.75rem 1.25rem;
 	border: 0;
@@ -1168,7 +1170,13 @@ body.services-page {
 	line-height: 1.35;
 }
 
-.facility-cta button {
+.facility-cta button,
+.facility-cta a {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	box-sizing: border-box;
+	text-decoration: none;
 	width: 100%;
 	height: 100%;
 	border: 0;
@@ -1182,11 +1190,13 @@ body.services-page {
 }
 
 .facility-cta button:hover,
-
+.facility-cta a:hover,
+.facility-cta a:focus-visible,
 .facility-cta button:focus-visible {
 	background: #d95e0c;
 }
 
+.facility-cta a:focus-visible,
 .facility-cta button:focus-visible {
 	outline: 2px solid #fff;
 	outline-offset: -4px;
@@ -1351,6 +1361,8 @@ body.home-page {
 
 /* Style orange booking actions used in overview panels. */
 .booking-button {
+	display: inline-block;
+	text-decoration: none;
 	align-self: flex-start;
 	margin-top: 0.9rem;
 	padding: 0.65rem 0.9rem;
@@ -1714,7 +1726,8 @@ body.home-page {
 	}
 
 	
-	.facility-cta button {
+	.facility-cta button,
+	.facility-cta a {
 		padding: 0.4rem 0.25rem;
 		font-size: 0.6rem;
 	}
