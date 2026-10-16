@@ -93,3 +93,12 @@ The project demonstrates the use of Html, JavaScript(Part 3), CSS, and GitHub in
 ---
 
 ## 10. References
+​* Bro Code (2021) Learn CSS in 1 hour. Available at: https://youtu.be/wRNinF7YQqQ (Accessed: 13 October 2026).
+​* Bro Code (2023) HTML & CSS Full Course for free. Available at: https://youtu.be/HGTJBPNC-Gw (Accessed: 13 October 2026).
+​* SuperSimpleDev (2024) CSS Tutorial For Beginners: CSS Crash Course (2026). Available at: https://youtu.be/c26O1N3x6ug (Accessed: 14 October 2026).
+* Microsoft (2026) Copilot [Generative AI]. Available from: https://copilot.microsoft.com/ [Accessed 15 October 2026].
+
+---
+
+## 11. Image References
+* Stemlist. (2019) group-of-people-playing-online-games [Online image], Unsplash. Available at: https://unsplash.com/photos/group-of-people-playing-online-games-ryRU-cd1yas [Accessed: 14 August 2026].
