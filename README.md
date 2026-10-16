@@ -1,4 +1,4 @@
-# NLG EA Gaming App
+# NLG EA Gaming Website
 
 ## 1. Introduction
 The NLG EA Gaming Webpage is a website designed to help users explore gaming packages and book gaming experiences. The website provides information about available activities, package prices, and booking options in one convenient place.
