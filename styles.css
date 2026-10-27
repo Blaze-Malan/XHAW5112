@@ -453,6 +453,163 @@ body.equipment-page {
 	color: #fff;
 }
 
+body.locations-page {
+	background: #071b3a;
+	color: #fff;
+}
+
+.locations-overview-copy h2 {
+	margin: 0;
+	color: #fff;
+	font-size: clamp(1.4rem, 3vw, 2.2rem);
+	font-weight: 800;
+	line-height: 1.1;
+}
+
+.locations-overview-copy {
+	justify-content: center;
+	gap: 0.1rem;
+	padding-bottom: 1rem;
+	background: #071b3a;
+}
+
+.locations-overview-copy .locations-overview-accent {
+	margin: 0;
+	color: #50bfff;
+	font-size: clamp(0.65rem, 1.2vw, 0.9rem);
+	font-weight: 800;
+	line-height: 1.2;
+}
+
+.locations-overview-copy .locations-overview-starts {
+	margin: 0;
+	color: #50bfff;
+	font-size: clamp(1.4rem, 3vw, 2.2rem);
+	font-weight: 800;
+	line-height: 1.1;
+}
+
+.locations-book-button {
+	align-self: flex-start;
+	margin-top: 0.35rem;
+	padding: 0.6rem 1rem;
+	background: #f07822;
+	color: #fff;
+	font-size: 0.8rem;
+	font-weight: 850;
+	text-decoration: none;
+}
+
+.locations-book-button:hover,
+.locations-book-button:focus-visible {
+	background: #d95e0c;
+}
+
+.locations-book-button:focus-visible {
+	outline: 2px solid #fff;
+	outline-offset: 3px;
+}
+
+.locations-city-intro {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	align-items: center;
+	gap: 2rem;
+	padding: 2rem 1rem;
+	color: #fff;
+	text-align: left;
+}
+
+.locations-city-intro .locations-overview-accent {
+	margin: 0 0 0.4rem;
+	color: #50bfff;
+	font-size: clamp(0.75rem, 1.4vw, 1rem);
+	font-weight: 800;
+}
+
+.locations-city-intro-heading h2,
+.locations-city-intro-heading > p:last-child {
+	margin: 0;
+	font-size: clamp(1.7rem, 4vw, 2.8rem);
+	font-weight: 850;
+	line-height: 1.1;
+}
+
+.locations-city-intro-heading > p:last-child {
+	margin-top: 0.2rem;
+	color: #50bfff;
+}
+
+.locations-city-intro-description {
+	max-width: 32rem;
+	margin: 0;
+	font-size: clamp(1rem, 1.8vw, 1.3rem);
+	line-height: 1.5;
+}
+
+.locations-card-grid {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: 1.25rem;
+	width: 100%;
+	padding: 0 clamp(1rem, 4vw, 3rem) 2rem;
+}
+
+.locations-card {
+	overflow: hidden;
+	background: #102b52;
+	text-align: center;
+}
+
+.locations-card img {
+	display: block;
+	width: 100%;
+	aspect-ratio: 4 / 3;
+	object-fit: cover;
+}
+
+.locations-card h2 {
+	margin: 0;
+	padding: 0.9rem;
+	background: #102b52;
+	color: #fff;
+	font-size: 1rem;
+	font-weight: 850;
+	letter-spacing: 0.08em;
+}
+
+.locations-go-button {
+	display: inline-block;
+	margin: 0.75rem 0 1rem;
+	padding: 0.55rem 1.25rem;
+	background: #f07822;
+	color: #fff;
+	font-size: 0.8rem;
+	font-weight: 850;
+	text-decoration: none;
+}
+
+.locations-go-button:hover,
+.locations-go-button:focus-visible {
+	background: #d95e0c;
+}
+
+.locations-go-button:focus-visible {
+	outline: 2px solid #fff;
+	outline-offset: 3px;
+}
+
+@media (max-width: 30rem) {
+	.locations-city-intro {
+		grid-template-columns: 1fr;
+		gap: 1rem;
+	}
+
+	.locations-card-grid {
+		grid-template-columns: 1fr;
+	}
+}
+
 .equipment-header {
 	display: flex;
 	align-items: center;
@@ -830,9 +987,30 @@ body.about-page {
 }
 
 .about-overview-copy {
-	justify-content: center;
+	justify-content: flex-start;
 	gap: 0.2rem;
 	padding: 0.4rem clamp(0.6rem, 1.2vw, 1rem);
+}
+
+.about-locations-button {
+	align-self: flex-start;
+	margin-top: 0.35rem;
+	padding: 0.35rem 0.65rem;
+	background: #f07822;
+	color: #fff;
+	font-size: 0.65rem;
+	font-weight: 800;
+	text-decoration: none;
+}
+
+.about-locations-button:hover,
+.about-locations-button:focus-visible {
+	background: #d95e0c;
+}
+
+.about-locations-button:focus-visible {
+	outline: 2px solid #fff;
+	outline-offset: 2px;
 }
 
 .about-overview-copy .about-heading {
@@ -1283,6 +1461,64 @@ body.services-page {
 body.home-page {
 	background: #071b3a;
 	color: #fff;
+}
+
+body.events-page {
+	background: #071b3a;
+	color: #fff;
+}
+
+.events-intro {
+	padding: clamp(1.5rem, 5vw, 4rem) clamp(1rem, 5vw, 4rem);
+}
+
+.events-intro h2 {
+	margin: 0 0 0.5rem;
+	color: #50bfff;
+	font-size: clamp(0.75rem, 1.2vw, 0.95rem);
+	font-weight: 850;
+}
+
+.events-intro p {
+	margin: 0;
+	font-size: clamp(1.8rem, 5vw, 3.5rem);
+	font-weight: 900;
+	line-height: 0.98;
+}
+
+.events-intro .events-intro-accent {
+	margin-top: 0.2rem;
+	color: #50bfff;
+}
+
+.events-feature-image {
+	display: block;
+	width: 100%;
+	height: 12rem;
+	object-fit: cover;
+}
+
+.events-upcoming-intro {
+	padding: clamp(1.5rem, 4vw, 3rem) clamp(1rem, 5vw, 4rem);
+}
+
+.events-upcoming-intro h2 {
+	margin: 0 0 0.5rem;
+	color: #50bfff;
+	font-size: clamp(0.75rem, 1.2vw, 0.95rem);
+	font-weight: 850;
+}
+
+.events-upcoming-intro p {
+	margin: 0;
+	color: #fff;
+	font-size: clamp(1.8rem, 5vw, 3.5rem);
+	font-weight: 900;
+	line-height: 0.98;
+}
+
+.events-upcoming-intro p span {
+	color: #50bfff;
 }
 
 
