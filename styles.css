@@ -16,6 +16,84 @@ body.standalone-footer-page {
 	flex-direction: column;
 }
 
+body.tournament-page {
+	background: #071b3a;
+	color: #fff;
+}
+
+body.tournament-page .tournament-feature {
+	position: relative;
+}
+
+body.tournament-page .tournament-feature-image {
+	display: block;
+	width: 100%;
+	height: 16rem;
+	margin-top: 0.75rem;
+	object-fit: cover;
+}
+
+body.tournament-page .tournament-feature-panel {
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	top: 50%;
+	left: 2%;
+	width: 35%;
+	padding: clamp(0.6rem, 2vw, 1.5rem);
+	background: #102b52;
+	transform: translateY(-50%);
+}
+
+body.tournament-page .tournament-feature-label {
+	display: inline-block;
+	margin-bottom: clamp(0.75rem, 2vw, 1.5rem);
+	padding: 0.4rem 0.6rem;
+	background: #f07822;
+	color: #fff;
+	font-size: clamp(0.55rem, 1.1vw, 0.8rem);
+	font-weight: 900;
+	letter-spacing: 0.04em;
+}
+
+body.tournament-page .tournament-feature-panel h2,
+body.tournament-page .tournament-feature-panel p {
+	margin: 0;
+	color: #50bfff;
+	font-size: clamp(0.85rem, 2vw, 1.5rem);
+	font-weight: 900;
+	line-height: 1.1;
+}
+
+body.tournament-page .tournament-feature-panel p {
+	margin-top: 0.35rem;
+}
+
+body.tournament-page .tournament-feature-schedule {
+	display: flex;
+	justify-content: space-between;
+	gap: 0.5rem;
+	width: 100%;
+	margin-top: 0.8rem;
+	color: #50bfff;
+	font-size: clamp(0.5rem, 1vw, 0.75rem);
+	font-weight: 800;
+	white-space: nowrap;
+}
+
+body.tournament-page .tournament-register-button {
+	margin-top: 0.8rem;
+	padding: 0.5rem 0.7rem;
+	border: 0;
+	background: #f07822;
+	color: #fff;
+	font: inherit;
+	font-size: clamp(0.55rem, 1vw, 0.75rem);
+	font-weight: 900;
+	letter-spacing: 0.03em;
+}
+
 body.standalone-footer-page .site-footer {
 	width: 100%;
 	margin-top: auto;
@@ -1491,11 +1569,82 @@ body.events-page {
 	color: #50bfff;
 }
 
+.events-feature {
+	position: relative;
+}
+
 .events-feature-image {
 	display: block;
 	width: 100%;
-	height: 12rem;
+	height: 16rem;
 	object-fit: cover;
+}
+
+.events-feature-copy {
+	position: absolute;
+	top: 1rem;
+	left: clamp(1rem, 5vw, 4rem);
+}
+
+.events-feature-label {
+	display: inline-block;
+	padding: 0.55rem 0.85rem;
+	background: #f07822;
+	color: #fff;
+	font-size: 0.75rem;
+	font-weight: 900;
+	letter-spacing: 0.06em;
+}
+
+.events-feature-date {
+	margin: 0.65rem 0 0.25rem;
+	color: #50bfff;
+	font-size: 0.7rem;
+	font-weight: 800;
+	letter-spacing: 0.06em;
+}
+
+.events-feature-title {
+	margin: 0;
+	color: #50bfff;
+	font-size: clamp(1.35rem, 4vw, 2.5rem);
+	font-weight: 900;
+	line-height: 0.98;
+}
+
+.events-feature-copy .events-feature-name {
+	margin: 0;
+	color: #fff;
+	font-size: clamp(1.35rem, 4vw, 2.5rem);
+	font-weight: 900;
+	line-height: 0.98;
+}
+
+.events-feature-title {
+	margin-top: 0.15rem;
+}
+
+.events-feature-button {
+	display: inline-block;
+	margin-top: 2rem;
+	padding: 0.55rem 0.85rem;
+	border: 0;
+	background: #f07822;
+	color: #fff;
+	font: inherit;
+	font-size: 0.75rem;
+	font-weight: 900;
+	letter-spacing: 0.04em;
+	text-decoration: none;
+}
+
+.events-feature-button:hover {
+	background: #d95e0c;
+}
+
+.events-feature-button:focus-visible {
+	outline: 2px solid #fff;
+	outline-offset: 3px;
 }
 
 .events-upcoming-intro {
@@ -1519,6 +1668,100 @@ body.events-page {
 
 .events-upcoming-intro p span {
 	color: #50bfff;
+}
+
+.events-date-card {
+	display: grid;
+	grid-template-columns: auto 1px minmax(0, 1fr) auto;
+	align-items: center;
+	gap: clamp(1rem, 3vw, 2rem);
+	max-width: 56rem;
+	margin-top: 1.5rem;
+	padding: clamp(1rem, 3vw, 2rem);
+	background: #102b52;
+}
+
+.events-date-card-date {
+	display: grid;
+	justify-items: center;
+	gap: 0.1rem;
+	min-width: 3.5rem;
+	color: #fff;
+	font-weight: 900;
+	line-height: 1;
+}
+
+.events-date-card-date span:first-child {
+	font-size: clamp(2rem, 5vw, 3.25rem);
+}
+
+.events-date-card-date span:last-child {
+	font-size: clamp(0.8rem, 1.5vw, 1rem);
+	letter-spacing: 0.08em;
+}
+
+.events-date-card-separator {
+	width: 1px;
+	height: 4.5rem;
+	background: #fff;
+}
+
+.events-date-card-details {
+	min-width: 0;
+}
+
+.events-date-card-label {
+	display: inline-block;
+	margin-bottom: 0.6rem;
+	padding: 0.35rem 0.65rem;
+	background: #50bfff;
+	color: #071b3a;
+	font-size: 0.75rem;
+	font-weight: 900;
+	letter-spacing: 0.06em;
+}
+
+.events-date-card-community .events-date-card-label {
+	background: #f07822;
+	color: #fff;
+}
+
+.events-date-card-details h3 {
+	margin: 0;
+	color: #fff;
+	font-size: clamp(1rem, 2.5vw, 1.5rem);
+	font-weight: 900;
+	line-height: 1.15;
+}
+
+.events-date-card-details p {
+	margin: 0.45rem 0 0;
+	color: #d7e5f6;
+	font-size: 0.85rem;
+	font-weight: 500;
+	line-height: 1.3;
+}
+
+.events-date-card-go {
+	display: inline-grid;
+	min-width: 3.25rem;
+	min-height: 2.5rem;
+	place-items: center;
+	padding: 0.5rem 0.75rem;
+	background: #f07822;
+	color: #fff;
+	font-size: 0.8rem;
+	font-weight: 900;
+	text-decoration: none;
+}
+
+.events-date-card-go:hover {
+	background: #d95e0c;
+}
+
+.events-date-card-go:focus-visible {
+	outline: 2px solid #fff;
+	outline-offset: 3px;
 }
 
 
