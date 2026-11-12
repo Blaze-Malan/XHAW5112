@@ -25,12 +25,178 @@ body.tournament-page .tournament-feature {
 	position: relative;
 }
 
+body.tournament-page .tournament-gradient-bar {
+	height: 8rem;
+	margin-top: 0.5rem;
+	background: linear-gradient(105deg, #50bfff 0%, #f5e85c 100%);
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 1rem;
+	padding: 0 2%;
+	color: #000;
+}
+
+body.tournament-page .tournament-stat {
+	display: flex;
+	flex-direction: column;
+}
+
+body.tournament-page .tournament-stat-value {
+	font-size: clamp(1.25rem, 4vw, 2.25rem);
+	font-weight: 900;
+	line-height: 1.1;
+}
+
+body.tournament-page .tournament-stat-label {
+	font-size: clamp(0.5rem, 1.1vw, 0.75rem);
+	font-weight: 800;
+	letter-spacing: 0.04em;
+}
+
 body.tournament-page .tournament-feature-image {
 	display: block;
 	width: 100%;
 	height: 16rem;
 	margin-top: 0.75rem;
 	object-fit: cover;
+}
+
+body.tournament-page .tournament-details {
+	display: flex;
+	align-items: stretch;
+	justify-content: space-between;
+	gap: 1.5rem;
+	margin: 1.5rem 2%;
+}
+
+body.tournament-page .tournament-overview {
+	flex: 1;
+	max-width: 36rem;
+	min-width: 0;
+}
+
+body.tournament-page .tournament-overview-label {
+	margin: 0 0 0.75rem;
+	color: #50bfff;
+	font-size: clamp(0.65rem, 1.2vw, 0.85rem);
+	font-weight: 800;
+	letter-spacing: 0.08em;
+}
+
+body.tournament-page .tournament-overview-title {
+	margin: 0 0 1rem;
+	color: #fff;
+	font-size: clamp(1.75rem, 5vw, 3rem);
+	font-weight: 900;
+	line-height: 1.05;
+}
+
+body.tournament-page .tournament-overview-title span {
+	display: block;
+}
+
+body.tournament-page .tournament-overview-accent {
+	color: #50bfff;
+}
+
+body.tournament-page .tournament-overview-text {
+	margin: 0 0 1.5rem;
+	font-size: clamp(0.75rem, 1.4vw, 0.95rem);
+	line-height: 1.5;
+}
+
+body.tournament-page .tournament-included-heading {
+	margin: 0 0 0.5rem;
+	color: #50bfff;
+	font-size: clamp(0.7rem, 1.3vw, 0.9rem);
+	font-weight: 800;
+	letter-spacing: 0.08em;
+}
+
+body.tournament-page .tournament-included-list {
+	width: 75%;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+body.tournament-page .tournament-included-list li {
+	padding: 0.6rem 0;
+	border-bottom: 1px solid #fff;
+	font-size: clamp(0.75rem, 1.4vw, 0.95rem);
+	font-weight: 700;
+}
+
+body.tournament-page .tournament-lower-box {
+	display: flex;
+	flex: none;
+	flex-direction: column;
+	align-items: stretch;
+	align-self: stretch;
+	width: 37%;
+	padding: clamp(0.75rem, 2vw, 1.5rem);
+	background: #102b52;
+}
+
+body.tournament-page .tournament-registration-label {
+	align-self: flex-start;
+	padding: 0.4rem 0.6rem;
+	background: #50bfff;
+	color: #071b3a;
+	font-size: clamp(0.55rem, 1.1vw, 0.8rem);
+	font-weight: 900;
+	letter-spacing: 0.04em;
+}
+
+body.tournament-page .tournament-registration-title {
+	margin: 0.9rem 0 auto;
+	color: #fff;
+	font-size: clamp(1rem, 2.4vw, 1.6rem);
+	font-weight: 900;
+	line-height: 1.1;
+}
+
+body.tournament-page .tournament-registration-row {
+	display: flex;
+	justify-content: space-between;
+	gap: 0.5rem;
+	padding: 0.6rem 0;
+	border-bottom: 1px solid #fff;
+	font-size: clamp(0.65rem, 1.2vw, 0.85rem);
+	font-weight: 700;
+}
+
+body.tournament-page .tournament-registration-row:first-of-type {
+	margin-top: 1rem;
+}
+
+body.tournament-page .tournament-registration-button {
+	align-self: center;
+	margin-top: 1rem;
+	padding: 0.6rem 1.2rem;
+	border: 0;
+	background: #f07822;
+	color: #fff;
+	font: inherit;
+	font-size: clamp(0.65rem, 1.2vw, 0.85rem);
+	font-weight: 900;
+	letter-spacing: 0.03em;
+}
+
+body.tournament-page .tournament-registration-button:hover,
+body.tournament-page .tournament-registration-button:focus-visible,
+body.tournament-page .tournament-register-button:hover,
+body.tournament-page .tournament-register-button:focus-visible,
+.faqs-search-button:hover,
+.faqs-search-button:focus-visible {
+	background: #d95e0c;
+}
+
+body.tournament-page .tournament-registration-note {
+	margin: 0.6rem 0 0;
+	font-size: clamp(0.5rem, 0.9vw, 0.65rem);
+	text-align: center;
 }
 
 body.tournament-page .tournament-feature-panel {
@@ -92,6 +258,191 @@ body.tournament-page .tournament-register-button {
 	font-size: clamp(0.55rem, 1vw, 0.75rem);
 	font-weight: 900;
 	letter-spacing: 0.03em;
+}
+
+body.faqs-page {
+	background: #071b3a;
+	color: #fff;
+}
+
+.faqs-intro {
+	padding: clamp(1rem, 3vw, 2rem) clamp(1rem, 5vw, 4rem);
+	text-align: left;
+}
+
+.faqs-intro h2 {
+	margin: 0 0 0.5rem;
+	color: #50bfff;
+	font-size: clamp(0.75rem, 1.2vw, 0.95rem);
+	font-weight: 850;
+}
+
+.faqs-intro p {
+	margin: 0;
+	color: #fff;
+	font-size: clamp(2rem, 6.5vw, 4rem);
+	font-weight: 900;
+	line-height: 0.95;
+}
+
+.faqs-intro .faqs-intro-accent {
+	color: #50bfff;
+}
+
+.faqs-search {
+	display: flex;
+	width: min(100% - 2 * clamp(1rem, 5vw, 4rem), 20rem);
+	margin: 0 clamp(1rem, 5vw, 4rem) clamp(1rem, 3vw, 2rem);
+}
+
+.faqs-search-input {
+	box-sizing: border-box;
+	flex: 1;
+	min-width: 0;
+	padding: 0.7rem 1rem;
+	border: 1px solid #50bfff;
+	border-right: 0;
+	background: #102b52;
+	color: #fff;
+	font: inherit;
+}
+
+.faqs-search-button {
+	padding: 0.7rem 1rem;
+	border: 0;
+	background: #f07822;
+	color: #fff;
+	font: inherit;
+	font-weight: 900;
+	letter-spacing: 0.03em;
+}
+
+.faqs-search-input::placeholder {
+	color: rgba(255, 255, 255, 0.6);
+}
+
+.faqs-divider {
+	width: 100%;
+	margin: 0;
+	border: 0;
+	border-top: 1px solid #fff;
+}
+
+.faqs-body {
+	display: grid;
+	grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+	gap: clamp(1rem, 4vw, 3rem);
+	padding: clamp(1rem, 3vw, 2rem) clamp(1rem, 5vw, 4rem);
+}
+
+.faqs-questions h2 {
+	margin: 0 0 0.5rem;
+	color: #50bfff;
+	font-size: clamp(0.75rem, 1.2vw, 0.95rem);
+	font-weight: 850;
+}
+
+.faqs-questions-title {
+	margin: 0;
+	color: #fff;
+	font-size: clamp(1.5rem, 4vw, 2.5rem);
+	font-weight: 900;
+	line-height: 0.95;
+}
+
+.faqs-questions-title span {
+	color: #50bfff;
+}
+
+.faqs-questions-divider {
+	margin: 1rem 0 0;
+	border: 0;
+	border-top: 1px solid #fff;
+}
+
+.faqs-questions ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.faqs-questions li {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 1rem;
+	padding: 0.9rem 0;
+	border-bottom: 1px solid #fff;
+	color: #fff;
+	font-weight: 800;
+}
+
+.faqs-plus {
+	color: #50bfff;
+	font-size: 1.5rem;
+	line-height: 1;
+}
+
+.faqs-topics {
+	padding: 0;
+}
+
+.faqs-help-bar {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 1rem;
+	min-height: 8rem;
+	padding: 1.5rem clamp(1rem, 5vw, 4rem);
+	background: linear-gradient(105deg, #50bfff 0%, #f5e85c 100%);
+	color: #000;
+}
+
+.faqs-help-text h2 {
+	margin: 0 0 0.4rem;
+	font-size: clamp(1.1rem, 2.5vw, 1.6rem);
+	font-weight: 900;
+}
+
+.faqs-help-text p {
+	margin: 0;
+	font-weight: 600;
+}
+
+.faqs-help-button {
+	padding: 0.8rem 1.4rem;
+	background: #f07822;
+	color: #fff;
+	font-weight: 900;
+	letter-spacing: 0.03em;
+	text-decoration: none;
+	white-space: nowrap;
+}
+
+.faqs-help-button:hover,
+.faqs-help-button:focus-visible {
+	background: #d95e0c;
+}
+
+.faqs-topics h2 {
+	margin: 0 0 0.75rem;
+	color: #50bfff;
+	font-size: clamp(0.75rem, 1.2vw, 0.95rem);
+	font-weight: 850;
+}
+
+.faqs-topics ul {
+	width: min(100%, 20rem);
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.faqs-topics li {
+	padding: 0.75rem 0;
+	border-bottom: 1px solid #fff;
+	color: #fff;
+	font-weight: 700;
 }
 
 body.standalone-footer-page .site-footer {
@@ -779,6 +1130,164 @@ body.locations-page {
 	display: grid;
 	grid-template-columns: repeat(2, minmax(0, 1fr));
 	min-height: 20rem;
+}
+
+.community-feature {
+	grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
+	grid-template-rows: minmax(0, 1fr);
+	height: 15rem;
+	min-height: 0;
+}
+
+.equipment-feature.community-feature > img {
+	min-height: 0;
+}
+
+.community-boxes {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	grid-template-rows: repeat(2, minmax(0, 1fr));
+}
+
+.community-box-accent {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 0.4rem;
+	padding: 0.5rem clamp(0.75rem, 2vw, 1.25rem);
+	background: #f07822;
+	color: #fff;
+}
+
+.community-quote {
+	margin: 0;
+	font-size: clamp(0.65rem, 1.5vw, 1rem);
+	font-weight: 900;
+	line-height: 1.15;
+}
+
+.community-quote-author {
+	margin: 0;
+	font-size: clamp(0.5rem, 0.9vw, 0.65rem);
+	font-weight: 800;
+	letter-spacing: 0.04em;
+}
+
+.community-box-image {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	color: #fff;
+}
+
+.community-box-join {
+	grid-column: 1 / -1;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: center;
+	gap: 0.6rem;
+	padding: 0.75rem clamp(1rem, 3vw, 2rem);
+	background: #102b52;
+}
+
+.community-box-join h2 {
+	display: flex;
+	flex-direction: column;
+	margin: 0;
+	color: #fff;
+	font-size: clamp(1.4rem, 3vw, 2.5rem);
+	font-weight: 900;
+	line-height: 1.05;
+}
+
+.community-box-join h2 span:last-child {
+	color: #50bfff;
+}
+
+.community-involved {
+	padding: clamp(1rem, 3vw, 2rem) clamp(1rem, 5vw, 4rem);
+}
+
+.community-involved-label {
+	margin: 0 0 0.5rem;
+	color: #50bfff;
+	font-size: clamp(0.65rem, 1.2vw, 0.85rem);
+	font-weight: 800;
+	letter-spacing: 0.08em;
+}
+
+.community-involved h2 {
+	margin: 0 0 1.25rem;
+	color: #fff;
+	font-size: clamp(1.75rem, 5vw, 3rem);
+	font-weight: 900;
+	line-height: 1.05;
+}
+
+.community-involved h2 span {
+	color: #50bfff;
+}
+
+.community-involved-cards {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: clamp(0.75rem, 2vw, 1.5rem);
+}
+
+.community-involved-card {
+	min-height: 10rem;
+	padding: clamp(0.75rem, 2vw, 1.5rem);
+	background: #102b52;
+}
+
+.community-involved-card h3 {
+	margin: 0 0 0.5rem;
+	color: #50bfff;
+	font-size: clamp(0.9rem, 2vw, 1.4rem);
+	font-weight: 900;
+	letter-spacing: 0.04em;
+}
+
+.community-involved-card p {
+	margin: 0;
+	color: #fff;
+	font-size: clamp(0.7rem, 1.3vw, 0.9rem);
+	line-height: 1.4;
+}
+
+.community-page-divider {
+	width: 100%;
+	height: 1px;
+	margin: 0;
+	border: 0;
+	background: #fff;
+}
+
+.community-stats {
+	display: flex;
+	justify-content: space-between;
+	padding: clamp(1rem, 3vw, 2rem) clamp(1rem, 5vw, 4rem);
+}
+
+.community-stat {
+	display: flex;
+	flex-direction: column;
+}
+
+.community-stat-value {
+	color: #50bfff;
+	font-size: clamp(1.5rem, 4vw, 2.5rem);
+	font-weight: 900;
+	line-height: 1.1;
+}
+
+.community-stat-label {
+	color: #fff;
+	font-size: clamp(0.55rem, 1.1vw, 0.8rem);
+	font-weight: 800;
+	letter-spacing: 0.04em;
 }
 
 .equipment-feature > img {
