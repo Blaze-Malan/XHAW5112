@@ -36,6 +36,9 @@ Users can learn a little about NLG EA Gamings history and their mission as an es
 ### Contact
 The contact section provides information to help users contact NLG EA Gaming.
 
+### Game Library
+On the Equipment page, visitors can filter the game library by competitive, casual, or sports games. The filter requires JavaScript; all games remain visible when JavaScript is unavailable.
+
 ### Navigation
 The website includes both top and bottom navigation bars to help users move between the different pages.
 

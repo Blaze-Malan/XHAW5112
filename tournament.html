@@ -6,6 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Tournament | Next Level Gaming &amp; Esports Arena</title>
 	<link rel="stylesheet" href="styles.css">
+	<script src="script.js" defer></script>
 </head>
 <body class="standalone-footer-page tournament-page">
 	<!-- Brand and booking. -->
@@ -26,26 +27,43 @@
 				<span>24 MAY 2027</span>
 				<span>18:00 START</span>
 			</div>
-			<button class="tournament-register-button" type="button">EVENT RULES</button>
+			<button class="tournament-register-button" id="event-rules-button" type="button" aria-haspopup="dialog" aria-controls="event-rules" data-dialog-open>EVENT RULES</button>
 		</div>
 	</div>
+	<dialog class="site-dialog" id="event-rules" aria-labelledby="event-rules-title">
+		<h2 id="event-rules-title">VALORANT OPEN: EVENT RULES</h2>
+		<p>Suggested rules for the Johannesburg Open Series. Final details will be confirmed by the event organisers.</p>
+		<ul>
+			<li>Each team plays with five players in the double-elimination bracket.</li>
+			<li>Check in with the event team before the tournament starts and be ready when your match is called.</li>
+			<li>Use your own VALORANT account and follow the instructions of tournament officials.</li>
+			<li>Cheating, unauthorised software and exploiting bugs are not permitted.</li>
+			<li>Treat players, staff and spectators with respect. Harassment and abusive behaviour are not permitted.</li>
+			<li>Report technical issues or disputes to an official as soon as they occur.</li>
+		</ul>
+		<form method="dialog">
+			<button type="submit" autofocus>CLOSE</button>
+		</form>
+	</dialog>
 	<div class="tournament-gradient-bar">
-		<div class="tournament-stat">
-			<span class="tournament-stat-value">32</span>
-			<span class="tournament-stat-label">TEAM CAP</span>
-		</div>
-		<div class="tournament-stat">
-			<span class="tournament-stat-value">R15000</span>
-			<span class="tournament-stat-label">PRIZE POOL</span>
-		</div>
-		<div class="tournament-stat">
-			<span class="tournament-stat-value">5V5</span>
-			<span class="tournament-stat-label">FORMAT</span>
-		</div>
-		<div class="tournament-stat">
-			<span class="tournament-stat-value">OPEN</span>
-			<span class="tournament-stat-label">SKILL LEVEL</span>
-		</div>
+		<table class="tournament-stats-table">
+			<thead>
+				<tr>
+					<th scope="col">TEAM CAP</th>
+					<th scope="col">PRIZE POOL</th>
+					<th scope="col">FORMAT</th>
+					<th scope="col">SKILL LEVEL</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>32</td>
+					<td>R15000</td>
+					<td>5V5</td>
+					<td>OPEN</td>
+				</tr>
+			</tbody>
+		</table>
 	</div>
 	<section class="tournament-details">
 		<div class="tournament-overview">
@@ -73,10 +91,22 @@
 				<span>Spaces remaining</span>
 				<span>08 TEAMS</span>
 			</div>
-			<button class="tournament-registration-button" type="button">REGISTER TEAM</button>
+			<button class="tournament-registration-button" type="button" aria-haspopup="dialog" aria-controls="registration-contact" data-dialog-open>REGISTER TEAM</button>
 			<p class="tournament-registration-note">Registration closes 22 MAY at 23:59</p>
 		</div>
 	</section>
+	<dialog class="site-dialog" id="registration-contact" aria-labelledby="registration-contact-title">
+		<h2 id="registration-contact-title">REGISTER YOUR TEAM</h2>
+		<p>Contact Next Level Gaming &amp; Esports Arena to request team registration. Registration is not confirmed until the arena replies.</p>
+		<ul>
+			<li>Phone: <a href="tel:+27111234567">+27 11 123 4567</a></li>
+			<li>Email: <a href="mailto:info@nextlevlarena.co.za?subject=Valorant%20Open%20team%20registration">info@nextlevlarena.co.za</a></li>
+			<li>Address: 126 Gamer Street, Johannesburg, South Africa</li>
+		</ul>
+		<form method="dialog">
+			<button type="submit" autofocus>CLOSE</button>
+		</form>
+	</dialog>
 	<!-- Copyright footer. -->
 	<footer class="site-footer">
 		<p class="copyright">2025 Next Level Gaming &amp; Esports Arena All Rights Reserved</p>

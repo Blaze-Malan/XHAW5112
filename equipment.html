@@ -5,6 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Equipment | Next Level Gaming &amp; Esports Arena</title>
 	<link rel="stylesheet" href="styles.css">
+	<script src="script.js" defer></script>
 </head>
 <body class="equipment-page">
 	<!-- Brand and booking. -->
@@ -49,33 +50,56 @@
 					<span class="equipment-spec-label">AUDIO</span>
 				</div>
 			</div>
-			<button class="equipment-book-button equipment-full-specs-button" type="button">VIEW FULL SPECS</button>
+			<button class="equipment-book-button equipment-full-specs-button" type="button" aria-haspopup="dialog" aria-controls="equipment-full-specs" data-dialog-open>VIEW FULL SPECS</button>
 		</div>
 	</section>
+	<dialog class="site-dialog" id="equipment-full-specs" aria-labelledby="equipment-full-specs-title">
+		<h2 id="equipment-full-specs-title">GAMING SETUP SPECS</h2>
+		<p>Example high-end gaming setup. Actual arena equipment may vary.</p>
+		<ul>
+			<li>Processor: AMD Ryzen 7 9800X3D, 8 cores and 16 threads</li>
+			<li>Graphics: NVIDIA GeForce RTX 5080</li>
+			<li>Memory: 32GB DDR5 RAM</li>
+			<li>Storage: 2TB NVMe SSD</li>
+			<li>Monitor: 240Hz refresh rate and 1ms response time</li>
+			<li>Audio: 7.1 surround sound gaming headset</li>
+			<li>Peripherals: Mechanical gaming keyboard and gaming mouse</li>
+			<li>Networking: Wired Ethernet connection</li>
+		</ul>
+		<p>For actual equipment details, <a href="contact.html">contact the arena</a>.</p>
+		<form method="dialog">
+			<button type="submit" autofocus>CLOSE</button>
+		</form>
+	</dialog>
 	<!-- Game library. -->
 	<section class="equipment-library" aria-labelledby="equipment-library-heading">
 		<div class="equipment-library-copy">
 			<h2 id="equipment-library-heading">GAME LIBRARY</h2>
 			<p>PICK YOUR <span>WORLD.</span></p>
 		</div>
-		<div class="game-category-grid" aria-label="Game categories">
-			<div class="game-category">ALL GAMES</div>
-			<div class="game-category">COMPETITIVE</div>
-			<div class="game-category">CASUAL</div>
-			<div class="game-category">SPORTS</div>
+		<div class="game-filter">
+			<label for="game-category">FILTER BY CATEGORY</label>
+			<select id="game-category" aria-controls="game-library" disabled>
+				<option value="all">ALL GAMES</option>
+				<option value="competitive">COMPETITIVE</option>
+				<option value="casual">CASUAL</option>
+				<option value="sports">SPORTS</option>
+			</select>
+			<noscript><p>Enable JavaScript to filter the game library.</p></noscript>
+			<p id="game-filter-status" role="status" aria-live="polite"></p>
 		</div>
 	</section>
 	<!-- Game tiles with each title and its genre. -->
 	<section class="equipment-block-section" aria-label="Equipment highlights">
-		<div class="equipment-block-grid" aria-label="Available games and genres">
-			<article class="equipment-game-card"><h2>VALORANT</h2><p>TACTICAL FPS</p></article>
-			<article class="equipment-game-card"><h2>FORTNITE</h2><p>BATTLE ROYALE</p></article>
-			<article class="equipment-game-card"><h2>APEX LEGENDS</h2><p>HERO SHOOTER</p></article>
-			<article class="equipment-game-card"><h2>ROCKET LEAGUE</h2><p>SPORTS</p></article>
-			<article class="equipment-game-card"><h2>EA SPORTS FC</h2><p>SPORTS</p></article>
-			<article class="equipment-game-card"><h2>MINECRAFT</h2><p>ADVENTURE</p></article>
-			<article class="equipment-game-card"><h2>LEAGUE OF LEGENDS</h2><p>MOBA</p></article>
-			<article class="equipment-game-card"><h2>COUNTER-STRIKE 2</h2><p>TACTICAL FPS</p></article>
+		<div class="equipment-block-grid" id="game-library" aria-label="Available games and genres">
+			<article class="equipment-game-card" data-categories="competitive"><h2>VALORANT</h2><p>TACTICAL FPS</p></article>
+			<article class="equipment-game-card" data-categories="competitive casual"><h2>FORTNITE</h2><p>BATTLE ROYALE</p></article>
+			<article class="equipment-game-card" data-categories="competitive"><h2>APEX LEGENDS</h2><p>HERO SHOOTER</p></article>
+			<article class="equipment-game-card" data-categories="competitive casual sports"><h2>ROCKET LEAGUE</h2><p>SPORTS</p></article>
+			<article class="equipment-game-card" data-categories="competitive casual sports"><h2>EA SPORTS FC</h2><p>SPORTS</p></article>
+			<article class="equipment-game-card" data-categories="casual"><h2>MINECRAFT</h2><p>ADVENTURE</p></article>
+			<article class="equipment-game-card" data-categories="competitive"><h2>LEAGUE OF LEGENDS</h2><p>MOBA</p></article>
+			<article class="equipment-game-card" data-categories="competitive"><h2>COUNTER-STRIKE 2</h2><p>TACTICAL FPS</p></article>
 		</div>
 	</section>
 	<!-- Copyright notice. -->

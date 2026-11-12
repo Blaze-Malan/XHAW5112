@@ -6,6 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Fees | Next Level Gaming &amp; Esports Arena</title>
 	<link rel="stylesheet" href="styles.css">
+	<script src="script.js" defer></script>
 </head>
 <body class="standalone-footer-page fees-page">
 	<!-- Header. -->
@@ -27,55 +28,91 @@
 	<main class="fees-intro">
 		<h1>CALCULATE YOUR FEES</h1>
 		<p>Select your bookings and calculate your total</p>
-		<section class="fees-card-grid" aria-label="Fee calculator steps">
+		<form class="fees-card-grid" id="fees-calculator" novalidate>
 			<article class="fees-card">
-				<h2>1. SELECT YOUR BOOKINGS</h2>
-				<div class="fees-package-list">
-					<div class="fees-package-option">
-						<div class="fees-package-heading">
-							<h3>Ultimate Gamer Pass</h3>
-							<span>R1500</span>
+				<h2>1. CHOOSE A PACKAGE</h2>
+				<div class="fees-package-list" role="radiogroup" aria-label="Available packages">
+					<label class="fees-package-option">
+						<input type="radio" name="package" value="Ultimate Gamer Pass" data-price="1500" required>
+						<div class="fees-package-content">
+							<div class="fees-package-heading">
+								<h3>Ultimate Gamer Pass</h3>
+								<span>R1,500</span>
+							</div>
+							<p>Unlimited access to gaming for a day.</p>
 						</div>
-						<p>Unlimited access to gaming for a day.</p>
-					</div>
-					<div class="fees-package-option">
-						<div class="fees-package-heading">
-							<h3>VIP Gaming Experience</h3>
-							<span>R1500</span>
+					</label>
+					<label class="fees-package-option">
+						<input type="radio" name="package" value="VIP Gaming Experience" data-price="1500">
+						<div class="fees-package-content">
+							<div class="fees-package-heading">
+								<h3>VIP Gaming Experience</h3>
+								<span>R1,500</span>
+							</div>
+							<p>Premium gaming + lounge access</p>
 						</div>
-						<p>Premium gaming + lounge access</p>
-					</div>
-					<div class="fees-package-option">
-						<div class="fees-package-heading">
-							<h3>Esports Training Package</h3>
-							<span>R1500</span>
+					</label>
+					<label class="fees-package-option">
+						<input type="radio" name="package" value="Esports Training Package" data-price="1500">
+						<div class="fees-package-content">
+							<div class="fees-package-heading">
+								<h3>Esports Training Package</h3>
+								<span>R1,500</span>
+							</div>
+							<p>Professional training sessions.</p>
 						</div>
-						<p>Professional training sessions.</p>
-					</div>
-					<div class="fees-package-option">
-						<div class="fees-package-heading">
-							<h3>Birthday Party Package</h3>
-							<span>R1500</span>
+					</label>
+					<label class="fees-package-option">
+						<input type="radio" name="package" value="Birthday Party Package" data-price="1500">
+						<div class="fees-package-content">
+							<div class="fees-package-heading">
+								<h3>Birthday Party Package</h3>
+								<span>R1,500</span>
+							</div>
+							<p>Celebrate with games, food and fun.</p>
 						</div>
-						<p>Celebrate with games, food and fun.</p>
-					</div>
+					</label>
+					<label class="fees-package-option">
+						<input type="radio" name="package" value="Virtual Reality Experience" data-price="750">
+						<div class="fees-package-content">
+							<div class="fees-package-heading">
+								<h3>Virtual Reality Experience</h3>
+								<span>R750</span>
+							</div>
+							<p>Immersive VR games and simulations across multiple worlds.</p>
+						</div>
+					</label>
+					<label class="fees-package-option">
+						<input type="radio" name="package" value="Racing Simulator Challenge" data-price="750">
+						<div class="fees-package-content">
+							<div class="fees-package-heading">
+								<h3>Racing Simulator Challenge</h3>
+								<span>R750</span>
+							</div>
+							<p>Realistic racing simulator sessions and time trials.</p>
+						</div>
+					</label>
+					<label class="fees-package-option">
+						<input type="radio" name="package" value="Escape Room Challenge" data-price="750">
+						<div class="fees-package-content">
+							<div class="fees-package-heading">
+								<h3>Escape Room Challenge</h3>
+								<span>R750</span>
+							</div>
+							<p>Themed escape rooms for teams of 2-6 players.</p>
+						</div>
+					</label>
 				</div>
 			</article>
 			<article class="fees-card">
 				<h2>2. NUMBER OF BOOKINGS</h2>
 				<label class="fees-booking-select">
 					<span>Number of bookings</span>
-					<select aria-label="Number of bookings">
-						<option value="" selected>Select</option>
-						<option value="1">1</option>
-						<option value="2">2</option>
-						<option value="3">3</option>
-						<option value="4">4+</option>
-					</select>
+					<input id="booking-count" type="number" min="1" step="1" value="1" inputmode="numeric" required>
 				</label>
 				<h3 class="fees-discount-heading">3. DISCOUNT</h3>
-				<div class="fees-discount-value">0%</div>
-				<button class="fees-calculate-button" type="button">CALCULATE YOUR FEES</button>
+				<div class="fees-discount-value" id="fees-discount-value">0%</div>
+				<button class="fees-calculate-button" type="submit">CALCULATE YOUR FEES</button>
 				<section class="fees-discount-information" aria-labelledby="discount-information-heading">
 					<h3 id="discount-information-heading">DISCOUNT INFORMATION</h3>
 					<h4>BOOKING DISCOUNTS</h4>
@@ -92,26 +129,27 @@
 				<hr class="fees-summary-divider">
 				<div class="fees-summary-row">
 					<span>Subtotal:</span>
-					<span>R_____</span>
+					<span id="fees-subtotal">R0</span>
 				</div>
 				<div class="fees-summary-row">
 					<span>Discount:</span>
-					<span>R_____</span>
+					<span id="fees-discount">R0</span>
 				</div>
 				<hr class="fees-summary-divider">
 				<div class="fees-summary-total">
 					<span>TOTAL:</span>
-					<span>R_____</span>
+					<span id="fees-total">R0</span>
 				</div>
-				<div class="fees-summary-output" aria-label="Order total"></div>
-				<button class="fees-book-button" type="button">BOOK NOW</button>
+				<p class="fees-summary-output" id="fees-summary-output" role="status" aria-live="polite">Choose a package and number of bookings to calculate your total.</p>
+				<button class="fees-book-button" id="fees-book-button" type="button" disabled>BOOK NOW</button>
+				<p class="fees-booking-note">BOOK NOW prepares a booking request in your email app; your booking is not confirmed until the arena replies.</p>
 			</article>
-		</section>
+		</form>
 	</main>
 	<section class="fees-gradient-strip" aria-labelledby="fees-how-it-works-heading">
 		<h2 id="fees-how-it-works-heading">How it works</h2>
 		<ol>
-			<li>Select your packages</li>
+			<li>Select a package</li>
 			<li>Choose the number of bookings</li>
 			<li>See your discount</li>
 			<li>Calculate fees</li>
