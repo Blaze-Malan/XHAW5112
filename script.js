@@ -13,6 +13,7 @@
 	const totalOutput = form.querySelector('#fees-total');
 	const summaryOutput = form.querySelector('#fees-summary-output');
 	const bookButton = form.querySelector('#fees-book-button');
+	const bookingStatus = document.querySelector('#fees-booking-status');
 
 	if (
 		packageInputs.length === 0 ||
@@ -22,7 +23,8 @@
 		!(discountOutput instanceof HTMLElement) ||
 		!(totalOutput instanceof HTMLElement) ||
 		!(summaryOutput instanceof HTMLElement) ||
-		!(bookButton instanceof HTMLButtonElement)
+		!(bookButton instanceof HTMLButtonElement) ||
+		!(bookingStatus instanceof HTMLElement)
 	) {
 		throw new Error('The fee calculator markup is incomplete.');
 	}
@@ -35,6 +37,7 @@
 
 	let currentBooking = null;
 	let isCalculated = false;
+	let bookingToastTimeout;
 
 	// Read the current selection and apply the booking-count discount tiers.
 	function getBooking() {
@@ -91,6 +94,8 @@
 	// Any edits invalidate the previous calculation until the user recalculates.
 	function updateEstimate() {
 		isCalculated = false;
+		window.clearTimeout(bookingToastTimeout);
+		bookingStatus.hidden = true;
 		renderSummary(getBooking());
 	}
 
@@ -117,29 +122,23 @@
 
 		isCalculated = true;
 		renderSummary(booking);
-		summaryOutput.textContent = `Total calculated: ${currency.format(booking.total)}. Select BOOK NOW to prepare your booking request.`;
+		summaryOutput.textContent = `Total calculated: ${currency.format(booking.total)}. Select BOOK NOW to complete the demo.`;
 	});
 
-	// Prepare an email request with the current booking details.
+	// Show a demo confirmation without sending or storing a booking.
 	bookButton.addEventListener('click', () => {
-		if (!currentBooking) {
+		if (!currentBooking || !isCalculated) {
+			bookingStatus.textContent = 'Please calculate your fees before completing the demo.';
+			bookingStatus.hidden = false;
 			return;
 		}
 
-		const subject = 'Gaming booking request';
-		const body = [
-			'Hello, I would like to request a booking.',
-			'',
-			`Package: ${currentBooking.packageName}`,
-			`Number of bookings: ${currentBooking.bookingCount}`,
-			`Subtotal: ${currency.format(currentBooking.subtotal)}`,
-			`Discount: ${currency.format(currentBooking.discount)} (${currentBooking.discountRate * 100}%)`,
-			`Total: ${currency.format(currentBooking.total)}`,
-			'',
-			'Please contact me to confirm availability and complete my booking.'
-		].join('\n');
-
-		window.location.href = `mailto:info@nextlevlarena.co.za?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+		window.clearTimeout(bookingToastTimeout);
+		bookingStatus.textContent = 'Demo complete! No booking or payment was processed.';
+		bookingStatus.hidden = false;
+		bookingToastTimeout = window.setTimeout(() => {
+			bookingStatus.hidden = true;
+		}, 7000);
 	});
 
 	renderSummary(getBooking());
