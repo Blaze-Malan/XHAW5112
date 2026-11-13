@@ -12,7 +12,13 @@ The website is designed for friends, families, gamers, and teams who want to enj
 
 ---
 
-## 2. Project Objectives (Part 2)
+## 3. Website Demonstration
+* **YouTube Demonstration Video Task 2:** [Watch the Website Demonstration]https://youtu.be/lA5rq-ATorI
+* **YouTube Demonstration Video Task 3:** [Watch the Website Demonstration]https://youtu.be/EI1f8i7kseU
+
+---
+
+## 4. Project Objectives (Part 2)
 The main objectives of this application are to:
 * Display a home page with easy navigation.
 * Provide information about gaming experiences.
@@ -32,7 +38,7 @@ The objectives for Part 3 are to:
 
 ---
 
-## 3. Change Log
+## 5. Change Log
 
 ### Task 2
 * Created the initial visual layouts for seven pages using HTML and CSS, before adding JavaScript functionality.
@@ -94,14 +100,14 @@ Use the shared hamburger menu to navigate between pages; some pages also include
 
 ---
 
-## 5. Technologies Used
+## 6. Technologies Used
 The website was developed using:
 * Virtual Studio Code
 * GitHub for source code storage and version control
 
 ---
 
-## 6. Website Design
+## 8. Website Design
 The website uses a modern gaming-inspired design with a turquoise to yellow gradient header and colourful package sections.
 
 The main colours include:
@@ -115,19 +121,13 @@ The interface is designed to make information easy to read and navigation easy t
 
 ---
 
-## 7. Images and Assets
+## 9. Images and Assets
 * The website uses gaming-related images to represent the available packages.
 * The images are stored in the GitHub repository.
 
 ---
 
-## 8. Website Demonstration
-* **YouTube Demonstration Video Task 2:** [Watch the Website Demonstration]https://youtu.be/lA5rq-ATorI
-* **YouTube Demonstration Video Task 3:** [Watch the Website Demonstration]https://youtu.be/EI1f8i7kseU
-
----
-
-## 9. Future Improvements
+## 10. Future Improvements
 Possible future improvements include:
 * Adding user registration and login.
 * Connecting bookings to a database.
@@ -137,14 +137,14 @@ Possible future improvements include:
 
 ---
 
-## 10. Conclusion
+## 11. Conclusion
 The NLG EA Gaming Website provides a convenient way for users to explore gaming packages and discover available experiences. Its simple navigation, colourful design, and package information help users interact with the gaming service.
 
 The project demonstrates the use of Html, JavaScript, CSS, and GitHub in developing and managing a mobile application.
 
 ---
 
-## 11. References
+## 12. References
 * Bro Code (2021) Learn CSS in 1 hour. Available at: https://youtu.be/wRNinF7YQqQ (Accessed: 13 October 2026).
 * Bro Code (2023) HTML & CSS Full Course for free. Available at: https://youtu.be/HGTJBPNC-Gw (Accessed: 13 October 2026).
 * Bro Code (2022-2024) JavaScript tutorial for beginners [Video Playlist]. Youtube. Available at: https://youtube.com/playlist?list=PLZPZq0r_RZOO1zkgO4bIdfuLpizCeHYKv&si=_kF0JnDR0yaLbOeE [Accessed: 12 November 2026].
@@ -157,7 +157,7 @@ The project demonstrates the use of Html, JavaScript, CSS, and GitHub in develop
 
 ---
 
-## 12. Image References
+## 13. Image References
 * Stemlist. (2019) group-of-people-playing-online-games [Online image], Unsplash. Available at: https://unsplash.com/photos/group-of-people-playing-online-games-ryRU-cd1yas [Accessed: 14 August 2026].
 * Reich, T. (2020) Aerial view of city near mountain during daytime [Online image], Unsplash. Available at: https://unsplash.com/photos/aerial-view-of-city-near-mountain-during-daytime-1GgWbP74phY [Accessed: 13 November 2026].
 * Clark, M. (2019) Panoramic photo of lighted buildings [Online image], Unsplash. Available at: https://unsplash.com/photos/panoramic-photo-of-lighted-buildings-YYWro5qSxAU [Accessed: 13 November 2026].
