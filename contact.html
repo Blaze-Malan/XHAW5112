@@ -5,6 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Contact | Next Level Gaming &amp; Esports Arena</title>
 	<link rel="stylesheet" href="styles.css">
+	<script src="script.js" defer></script>
 </head>
 <body class="contact-page">
 	<!-- Header. -->
@@ -13,15 +14,6 @@
 			<span class="wordmark-top">NEXT LEVEL</span>
 			<span class="wordmark-bottom">GAMING &amp; ESPORTS ARENA</span>
 		</a>
-		<nav class="site-nav" aria-label="Main navigation">
-			<a href="index.html">HOME</a><span aria-hidden="true">|</span>
-			<a href="about.html">ABOUT US</a><span aria-hidden="true">|</span>
-			<a href="services.html">SERVICES</a><span aria-hidden="true">|</span>
-			<a href="packages.html">PACKAGES</a><span aria-hidden="true">|</span>
-			<a href="experiences.html">EXPERIENCES</a><span aria-hidden="true">|</span>
-			<a href="events.html">EVENTS</a><span aria-hidden="true">|</span>
-			<a href="contact.html" aria-current="page">CONTACT</a>
-		</nav>
 	</header>
 	<!-- Contact introduction. -->
 	<main class="contact-intro">
@@ -33,25 +25,27 @@
 			<section class="contact-panel contact-panel-secondary contact-form-panel" aria-labelledby="your-details-heading">
 				<h2 id="your-details-heading">Your Details</h2>
 				<hr>
-				<div class="contact-demo-form">
+				<form class="contact-demo-form" id="contact-form">
 					<div class="contact-field">
 						<label for="contact-name">FULL NAME</label>
-						<input id="contact-name" name="name" type="text" autocomplete="name">
+						<input id="contact-name" name="name" type="text" autocomplete="name" maxlength="100" required>
 					</div>
 					<div class="contact-field">
 						<label for="contact-email">Email Address</label>
-						<input id="contact-email" name="email" type="text" autocomplete="email">
+						<input id="contact-email" name="email" type="email" autocomplete="email" maxlength="254" required>
 					</div>
 					<div class="contact-field">
 						<label for="contact-subject">Subject</label>
-						<input id="contact-subject" name="subject" type="text">
+						<input id="contact-subject" name="subject" type="text" maxlength="120" required>
 					</div>
 					<div class="contact-field">
 						<label for="contact-message">Message</label>
-						<input id="contact-message" name="message" type="text">
+						<textarea id="contact-message" name="message" rows="5" maxlength="3000" required></textarea>
 					</div>
-					<button type="button">SEND MESSAGE</button>
-				</div>
+					<button type="submit" disabled>SEND MESSAGE</button>
+					<p class="contact-form-status" id="contact-form-status" role="status" aria-live="polite" aria-atomic="true" hidden></p>
+					<p class="contact-form-note">Demo form: entries are validated in your browser but aren't sent or saved.</p>
+				</form>
 			</section>
 			<section class="contact-panel contact-panel-primary contact-information" aria-labelledby="contact-information-heading">
 				<h2 id="contact-information-heading">CONTACT INFORMATION</h2>
@@ -92,7 +86,6 @@
 			<nav class="footer-links" aria-label="Quick links">
 				<a href="index.html">Home</a>
 				<a href="about.html">About Us</a>
-				<a href="packages.html">Packages</a>
 				<a href="experiences.html">Experiences</a>
 				<a href="events.html">Events</a>
 				<a href="contact.html">Contact Us</a>

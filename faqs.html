@@ -6,6 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>FAQs | Next Level Gaming &amp; Esports Arena</title>
 	<link rel="stylesheet" href="styles.css">
+	<script src="script.js" defer></script>
 </head>
 <body class="standalone-footer-page faqs-page">
 	<!-- Brand wordmark and booking action. -->
@@ -22,23 +23,26 @@
 		<p>QUESTIONS?</p>
 		<p class="faqs-intro-accent">GAME ON.</p>
 	</main>
-	<!-- Cosmetic search bar. -->
-	<div class="faqs-search">
-		<input class="faqs-search-input" type="text" placeholder="Search questions..." aria-label="Search questions">
-		<button class="faqs-search-button" type="button">SEARCH</button>
-	</div>
+	<!-- Search is enabled after the FAQ filters initialize. -->
+	<form class="faqs-search" role="search" id="faq-search-form">
+		<input class="faqs-search-input" id="faq-search-input" type="search" placeholder="Search questions..." aria-label="Search questions" aria-controls="faq-list" disabled>
+		<button class="faqs-search-button" type="submit" disabled>SEARCH</button>
+	</form>
+	<p class="faqs-filter-status" id="faq-filter-status" role="status" aria-live="polite">Enable JavaScript to search and filter questions.</p>
+	<noscript><p class="faqs-filter-status">JavaScript is required for FAQ search and topic filters. You can still open each question.</p></noscript>
 	<hr class="faqs-divider">
 	<!-- Topics and questions layout. -->
 	<div class="faqs-body">
 	<!-- Topic list. -->
 	<section class="faqs-topics">
 		<h2>BROWSE TOPICS</h2>
-		<ul>
-			<li>Bookings and visits</li>
-			<li>Equipment</li>
-			<li>Age and access</li>
-			<li>Games and accounts</li>
-			<li>Food and drink</li>
+		<ul class="faqs-topic-list">
+			<li><button class="faqs-topic-button" type="button" data-faq-topic="all" aria-pressed="true" disabled>All questions</button></li>
+			<li><button class="faqs-topic-button" type="button" data-faq-topic="bookings" aria-pressed="false" disabled>Bookings and visits</button></li>
+			<li><button class="faqs-topic-button" type="button" data-faq-topic="equipment" aria-pressed="false" disabled>Equipment</button></li>
+			<li><button class="faqs-topic-button" type="button" data-faq-topic="age" aria-pressed="false" disabled>Age and access</button></li>
+			<li><button class="faqs-topic-button" type="button" data-faq-topic="games" aria-pressed="false" disabled>Games and accounts</button></li>
+			<li><button class="faqs-topic-button" type="button" data-faq-topic="food" aria-pressed="false" disabled>Food and drink</button></li>
 		</ul>
 	</section>
 	<!-- Frequently asked questions. -->
@@ -46,13 +50,39 @@
 		<h2>_FREQUENTLY ASKED</h2>
 		<p class="faqs-questions-title">EVERYTHING YOU<br><span>NEED TO KNOW.</span></p>
 		<hr class="faqs-questions-divider">
-		<ul>
-			<li><span>DO I NEED TO BOOK IN ADVANCE?</span><span class="faqs-plus" aria-hidden="true">+</span></li>
-			<li><span>CAN I BRING MY OWN PERIPHERALS?</span><span class="faqs-plus" aria-hidden="true">+</span></li>
-			<li><span>IS THERE AN AGE RESTRICTION?</span><span class="faqs-plus" aria-hidden="true">+</span></li>
-			<li><span>DO I NEED MY OWN GAME ACCOUNTS?</span><span class="faqs-plus" aria-hidden="true">+</span></li>
-			<li><span>CAN I ORDER FOOD WHILE PLAYING?</span><span class="faqs-plus" aria-hidden="true">+</span></li>
+		<ul class="faqs-question-list" id="faq-list">
+			<li data-faq-item data-topic="bookings">
+				<details class="faqs-question">
+					<summary><span>DO I NEED TO BOOK IN ADVANCE?</span><span class="faqs-plus" aria-hidden="true">+</span></summary>
+					<p>Walk-ins are welcome when stations are available, but booking ahead is the best way to secure your preferred time. Submit a request with BOOK NOW and wait for the arena's confirmation before travelling. Please arrive 10 minutes before your session.</p>
+				</details>
+			</li>
+			<li data-faq-item data-topic="equipment">
+				<details class="faqs-question">
+					<summary><span>CAN I BRING MY OWN PERIPHERALS?</span><span class="faqs-plus" aria-hidden="true">+</span></summary>
+					<p>Yes. You can bring a wired USB keyboard, mouse, or headset. Our team can help connect your gear; please don't install software or change settings on the arena PCs.</p>
+				</details>
+			</li>
+			<li data-faq-item data-topic="age">
+				<details class="faqs-question">
+					<summary><span>IS THERE AN AGE RESTRICTION?</span><span class="faqs-plus" aria-hidden="true">+</span></summary>
+					<p>Players of all ages are welcome. Guests under 16 must be accompanied by an adult, and age ratings still apply to individual games and events.</p>
+				</details>
+			</li>
+			<li data-faq-item data-topic="games">
+				<details class="faqs-question">
+					<summary><span>DO I NEED MY OWN GAME ACCOUNTS?</span><span class="faqs-plus" aria-hidden="true">+</span></summary>
+					<p>Our game library is installed on the arena PCs. Sign in with your own account to access your profile and progress, then remember to sign out at the end of your session. Never share your password with anyone.</p>
+				</details>
+			</li>
+			<li data-faq-item data-topic="food">
+				<details class="faqs-question">
+					<summary><span>CAN I ORDER FOOD WHILE PLAYING?</span><span class="faqs-plus" aria-hidden="true">+</span></summary>
+					<p>Snacks and non-alcoholic drinks are available from the counter. Please enjoy food in the lounge area and keep it away from the gaming PCs to protect the equipment.</p>
+				</details>
+			</li>
 		</ul>
+		<p class="faqs-empty-state" id="faq-empty-state" hidden>No questions match your search. Try another term or choose a different topic.</p>
 	</section>
 	</div>
 	<!-- Support call-to-action bar. -->
