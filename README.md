@@ -18,6 +18,22 @@ The main objectives of this application are to:
 
 ---
 
+## Change Log
+
+### Task 3
+* Added an Events feature banner and upcoming event cards, and expanded the Tournament page with an event overlay, stats table, overview, registration details, and rules and team-registration pop-ups.
+* Built an interactive fees calculator for gaming packages and the three R750 experiences, with booking-count discounts, validation, live totals, and an email booking-request draft.
+* Added an Equipment category dropdown with live game filtering and result counts, plus an illustrative high-end PC specifications pop-up.
+* Added expandable FAQ answers, live question search, topic filters, and practical visitor-policy information.
+* Built the Community page with player statistics, a testimonial, a Discord link, and Compete, Create, and Connect cards.
+* Designed the FAQ help centre with a topic list, question section, and gradient support banner linking to the Contact page.
+* Added matching hover and keyboard-focus styles to the tournament, FAQ search, and contact-support buttons.
+* Added a responsive visitor-policy table to Services and removed the duplicate from FAQs.
+* Reworked the Contact form with required-field and email validation, form reset, and a demo confirmation toast. Messages are not sent or stored.
+* Replaced top navigation bars with a shared right-side hamburger menu linking to the active pages, and removed the Packages page and its navigation/footer links.
+
+---
+
 ## 3. Features
 
 ### Home Page
